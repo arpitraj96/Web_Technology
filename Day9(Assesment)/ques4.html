@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .box-model {
+            border: 2px solid cyan;
+            padding: 20px;
+            margin: 20px;
+            box-sizing: border-box;
+            display: none;
+            background-color: yellowgreen;
+        }
+
+        #surprise-button {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #show-box-button{
+            color: #ff5722;
+            border: 2px solid brown;
+            border-radius: 5px;
+            box-shadow: 10px 5px 5px rgb(24, 23, 23);
+        }
+    </style>
+</head>
+<body>
+    <h3>Write JS program to open the CSS box model on click event. And in between that box model, there should be a button which says "Surprise" on click event.</h3>
+    <div class="container">
+        <button id="show-box-button">Open Box Model</button>
+        <div class="box-model">
+            <p>This is the CSS Box Model.</p>
+            <button id="surprise-button">Surprise</button>
+        </div>
+    </div>
+
+    <script>
+        const showBoxButton = document.getElementById("show-box-button");
+        const boxModel = document.querySelector(".box-model");
+        const surpriseButton = document.getElementById("surprise-button");
+
+        showBoxButton.addEventListener("click", function() {
+            boxModel.style.display = "block";
+        });
+
+        surpriseButton.addEventListener("click", function() {
+            alert("Surprise!");
+        });
+    </script>
+</body>
+</html>

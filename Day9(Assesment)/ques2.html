@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm,Alert,Dialogue</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            border: 5px solid black;
+            align-items: center;
+            text-align: center;
+            border-collapse: separate;
+            width: 400px;
+            height: auto;
+            background-color: brown;
+        }
+        tr{
+            border: 2px solid black;
+            margin-top: 50px;
+        }
+        button{
+            margin: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h3>Show the example of Confirm box, dialogue box, and message box.</h3>
+        <table>
+            <tr>
+                <th>
+                    <div class="confirm">
+                        <button style="background-color: yellow;" id="confirm" onclick="showConfirmBox()">Show Confirm Box</button>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="alert">
+                        <button style="background-color: cyan;" id="alert" onclick="showAlertBox()">Show Alert Box</button>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="prompt">
+                        <button style="background-color: mediumseagreen" id="prompt" onclick="showPromptBox()">Show Prompt Box</button>
+                    </div>
+                </th>
+            </tr>
+        </table>
+
+        <script>
+            function showConfirmBox() {
+                const result = confirm("Do you want to confirm this action?");
+                if (result) {
+                    alert("You confirmed the action.");
+                } else {
+                    alert("You canceled the action.");
+                }
+            }
+            function showAlertBox() {
+                alert("This is an alert box.");
+            }
+            function showPromptBox() {
+                const response = prompt("Please enter your name:", "Your Name here");
+                if (response !== null) {
+                    alert("Hello, " + response + "!");
+                } else {
+                    alert("You canceled entering your name.");
+                }
+            }
+        </script>
+        </center>
+</body>
+</html>
