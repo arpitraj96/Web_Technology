@@ -1,4 +1,0 @@
-<!ELEMENT Student (Name,Phone,College)>
-<!ELEMENT Name (#PCDATA)>
-<!ELEMENT Phone (#PCDATA)>
-<!ELEMENT College (#PCDATA)>
