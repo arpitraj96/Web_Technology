@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTOR</title>
+    <style>
+        div~p{
+            color: aqua;
+        }
+        div+p{
+            color: red;
+        }
+        p::first-letter{
+            font-size: 50px;
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is under selector</p>
+    </div>
+    <p>Hello</p>
+    <div>
+        <p>This is under: ~ </p>
+    </div>
+    <p>asdfghjkl</p>
+</body>
+</html>

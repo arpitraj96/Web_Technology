@@ -1,0 +1,10 @@
+h2{
+    text-decoration: underline;
+    color: red;
+}
+th{
+    background-color: brown;
+}
+td{
+    background-color: gray;
+}
